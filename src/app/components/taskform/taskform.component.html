@@ -1,0 +1,30 @@
+<form [formGroup]="taskForm">
+  <div class="mb-3">
+    <label class="form-label">Title</label>
+    <input type="text" class="form-control" formControlName="title" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Description</label>
+    <input type="text" class="form-control" formControlName="description" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Category</label>
+    <input type="text" class="form-control" formControlName="category" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Date</label>
+    <input type="date" class="form-control" formControlName="task_date" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Priority Level</label>
+    <input type="text" class="form-control" formControlName="priority_level" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Progress Level</label>
+    <input type="text" class="form-control" formControlName="progress_level" />
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+    Submit
+  </button>
+</form>

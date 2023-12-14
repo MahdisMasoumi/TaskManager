@@ -1,0 +1,31 @@
+<div class="card radius">
+  <div
+    class="card-header bg-success text-white"
+    [ngClass]="{
+      'bg-secodary': task.priority_level === 'low',
+      'bg-dark': task.priority_level === 'medium',
+      'bg-warning': task.priority_level === 'high',
+      'bg-danger': task.priority_level === 'critical'
+    }"
+  >
+    <h4 class="card-title">{{ task.title }}</h4>
+  </div>
+
+  <div class="card-body bg-primary text-white">
+    <p>{{ task.description }}</p>
+    <hr />
+    <p>{{ task.task_date }}</p>
+    <hr />
+    <p>{{ task.priority_level }}</p>
+    <hr />
+    <p>{{ task.category }}</p>
+    <hr />
+    <p>{{ task.progress_level }}</p>
+    <hr />
+    <p>{{ task.depart_id }}</p>
+    <button class="btn btn-success me-2" [routerLink]="['/edit-task', task.id]">
+      Edit
+    </button>
+    <button class="btn btn-danger" (click)="onDelete()">Delete</button>
+  </div>
+</div>

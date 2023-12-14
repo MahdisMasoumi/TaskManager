@@ -1,0 +1,11 @@
+img {
+  width: 55%;
+  height: 30rem;
+  border: 1px solid rgb(109, 144, 182);
+  border-radius: 2rem;
+  opacity: 0.9;
+}
+div {
+  text-align: center;
+  margin-bottom: 2rem;
+}
